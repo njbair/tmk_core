@@ -83,7 +83,7 @@ endif
 #
 
 # Imported source files and paths
-CHIBIOS ?= $(TMK_DIR)/tool/chibios/chibios
+CHIBIOS = $(TMK_DIR)/tool/chibios/chibios
 # Startup files.
 include $(CHIBIOS)/os/common/ports/ARMCMx/compilers/GCC/mk/startup_$(MCU_STARTUP).mk
 # HAL-OSAL files (optional).
@@ -175,7 +175,7 @@ CP   = $(TRGT)objcopy
 AS   = $(TRGT)gcc -x assembler-with-cpp
 AR   = $(TRGT)ar
 OD   = $(TRGT)objdump
-SZ   = $(TRGT)size -A
+SZ   = $(TRGT)size
 HEX  = $(CP) -O ihex
 BIN  = $(CP) -O binary
 
